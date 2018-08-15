@@ -1,0 +1,38 @@
+$gutter: 30px;
+$base-font-size: 16;
+
+$font-default: Helvetica, Arial, sans-serif;
+$font-heading: Geneva, sans-serif;
+
+$colors: (
+	brand: black
+);
+
+$breakpoints: (
+	xss-1 : 319px,
+	xss   : 320px,
+	xs-1  : 479px,
+	xs    : 480px,
+	xsm-1 : 639px,
+	xsm   : 640px,
+	sm-1  : 767px,
+	sm    : 768px,
+	md-1  : 991px,
+	md    : 992px,
+	lg-1  : 1023px,
+	lg    : 1024px,
+	xl-1  : 1199px,
+	xl    : 1200px,
+	xxl   : 1360px
+);
+
+$susy: (
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+	container: 1200px,
+	container-position: center,
+	columns: 12,
+	gutters: 0,
+	global-box-sizing: border-box,
+);

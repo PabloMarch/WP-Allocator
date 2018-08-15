@@ -1,0 +1,60 @@
+/**
+ * Pixel to REM
+ */
+@function rem( $pixels, $context: $base-font-size ) {
+	@return #{$pixels/$context}rem;
+}
+
+/**
+ * Converts Photoshop line heights to CSS REM
+ */
+@function leading($font-size, $leading) {
+	$lh: (($leading / 2) + $font-size);
+
+	@if ($lh < 100) {
+		$lh: $lh + 100;
+	}
+
+	@return (($leading / $font-size) * 100) * 1%;
+}
+
+/**
+ * Converts Photoshop letter spacing to CSS REM
+ */
+@function spacing($spacing) {
+	@return ($spacing / 1000) * 1rem;
+}
+
+/**
+ * Breakpoints
+ */
+@function break($key) {
+	@if map-has-key($breakpoints, $key) {
+		@return map-get($breakpoints, $key);
+	}
+
+	@warn "Unknown #{$key} in $breakpoints.";
+
+	@return null;
+}
+
+/**
+ * Get color from map
+ */
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+
+	@warn "Unknown #{$key} in $colors.";
+
+	@return null;
+}
+
+
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}

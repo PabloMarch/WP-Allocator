@@ -19,10 +19,6 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       http://orbitdevs.com/
- * @since      1.0.0
- *
- * @package    Wp_Allocator
  */
 
 // If uninstall not called from WordPress, then exit.

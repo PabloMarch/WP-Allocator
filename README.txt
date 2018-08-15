@@ -1,7 +1,16 @@
-## Description
+=== WP-Allocator ===
+
+Contributors: Pablo Marchena
+Tags: boilerplate, template, wordpress plugin
+Requires at least: 4.0.1
+Tested up to: 3.4
+Stable tag: 4.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+== Description ==
 
 WordPress plugin for My Allocator channel manager
-
 
 ## Features
 
@@ -24,12 +33,7 @@ Make sure all dependencies have been installed before moving on:
 
 ## Plugin Installation
 
-Fork or clone repository in your local dir
-* `yarn` — navigate to the plugin directory and run yarn
-* `composer install` — Install composer dependencies
-* `yarn run build` - Initial build
-* `yarn run start` - 'Watch'
-
+Fork or clone repository
 
 
 ### Install dependencies
@@ -70,7 +74,7 @@ If you are not using [Bedrock](https://roots.io/bedrock/), update `publicPath` t
 
 ```json
 ...
-  "publicPath": "/wp-plugins/plugin-name/"
+  "publicPath": "/wp-content/themes/sage"
 ...
 ```
 

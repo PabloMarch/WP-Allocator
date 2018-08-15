@@ -1,0 +1,78 @@
+/**
+ * Font shortend
+ */
+@mixin font($size, $line-height:$base-font-size, $letter-spacing:0) {
+    @if ($size) {
+        font-size: rem($size);
+    }
+
+    @if ($line-height == 1) {
+        line-height: 1;
+    }
+
+    @elseif ($line-height != $base-font-size) {
+        line-height: leading($size, $line-height);
+    }
+
+    @if ($letter-spacing != 0) {
+        letter-spacing: spacing($letter-spacing);
+    }
+
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+}
+
+
+/**
+ * Links styling
+ */
+@mixin link-colors($normal, $hover:'none') {
+    @if ($hover == 'none') {
+        $hover: $normal;
+    }
+
+    &:link,
+    &:focus,
+    &:active,
+    &:visited {
+        color: $normal;
+    }
+
+    &:hover {
+        color: $hover;
+    }
+}
+
+@mixin ns {
+    &:link,
+    &:visited {
+        @content;
+    }
+
+}
+
+@mixin hs {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+
+}
